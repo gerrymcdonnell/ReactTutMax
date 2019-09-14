@@ -9,11 +9,19 @@ import Footer from './src/components/Footer';*/
 import React, { Component } from 'react';
 import { Text, View,Stylesheet } from 'react-native';
 
+//import customcomponet nb convention is capital letter
+import FetchLocation from './src/components/FetchLocation';
+
 export default class HelloWorldApp extends Component {
+
+getUserLocationHandler=()=>{
+
+}
+
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
+        <FetchLocation onGetLocation={this.getUserLocationHandler} />
       </View>
     );
   }
